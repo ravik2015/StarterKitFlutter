@@ -9,6 +9,7 @@ import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import 'package:starter_flutter/ui/layout/layout_page.dart';
 
 class HomePage extends StatefulWidget {
+  static const String routeName = "/home";
   HomePage({Key key, this.title}) : super(key: key);
 
   final String title;
@@ -247,21 +248,27 @@ class _HomePageState extends State<HomePage>
           padding: EdgeInsets.zero,
           children: <Widget>[
             DrawerHeader(
-              child: Text('Drawer Header'),
+              child: new Container(
+                  child: new CircleAvatar(
+                backgroundColor: Colors.brown.shade800,
+                child: Text('News App'),
+              )),
               decoration: BoxDecoration(
                 color: Colors.red,
               ),
             ),
             ListTile(
-              title: Text('Item 1'),
+              title: Text('Home'),
               onTap: () {
                 Navigator.pop(context);
+                Navigator.of(context).pushNamed('/home');
               },
             ),
             ListTile(
-              title: Text('Item 2'),
+              title: Text('About'),
               onTap: () {
                 Navigator.pop(context);
+                Navigator.of(context).pushNamed('/about');
               },
             ),
           ],

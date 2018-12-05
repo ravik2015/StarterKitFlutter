@@ -29,7 +29,8 @@ dev_dependencies:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
-
+assets:
+  - assets/loading.gif
 # The following section is specific to Flutter.
 flutter:
   # The following line ensures that the Material Icons font is

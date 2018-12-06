@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:starter_flutter/ui/home/home_page.dart';
 import 'package:starter_flutter/ui/about/about_page.dart';
+import 'package:starter_flutter/ui/crypto/crypto_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,6 +18,8 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         // Set named routes
         AboutPage.routeName: (BuildContext context) => new AboutPage(),
+        CryptoPage.routeName: (BuildContext context) => new CryptoPage(),
+        HomePage.routeName: (BuildContext context) => new HomePage(),
       },
     );
   }

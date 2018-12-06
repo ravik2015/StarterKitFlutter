@@ -83,7 +83,6 @@ class _HomePageState extends State<HomePage>
                                 data == null ? 0 : data["articles"].length,
                             padding: new EdgeInsets.all(8.0),
                             itemBuilder: (BuildContext context, int index) {
-                              print(data["articles"][index]["source"]["name"]);
                               return new Container(
                                   height: 400,
                                   margin: new EdgeInsets.only(top: 10.0),
@@ -262,6 +261,13 @@ class _HomePageState extends State<HomePage>
               onTap: () {
                 Navigator.pop(context);
                 Navigator.of(context).pushNamed('/home');
+              },
+            ),
+            ListTile(
+              title: Text('Market'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.of(context).pushNamed('/crypto');
               },
             ),
             ListTile(
